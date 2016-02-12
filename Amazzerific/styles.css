@@ -1,0 +1,51 @@
+
+body {    
+	background-color: #f9e933;
+	border:solid white 20px;
+	border-bottom:solid white 500px;
+}
+
+header, main, footer {
+	min-width: 855px;
+
+}
+
+header.container, main .container, footer .container{
+	max-width: 855px;
+	
+}
+
+header{
+	background: white;
+}
+
+header nav{
+	width:285px;
+}
+nav{
+	display:inline;
+}
+
+
+main{
+	background:white;
+	
+}
+main h1,h2,h3,h5,p,li{
+	margin-left:100px;
+}
+.container{
+		margin-left:800px;
+		display:inline;
+		
+}
+.contact,.sitemap{
+	display:inline-table;
+}
+.sitemap{
+	margin-left:450px;
+}
+
+
+
+

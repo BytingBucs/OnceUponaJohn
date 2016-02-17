@@ -1,0 +1,128 @@
+
+body {    
+	background-color: #f9e933;
+	border:solid white 20px;
+	border-bottom:solid white 500px;
+}
+
+header, main, footer {
+	min-width: 855px;
+
+}
+
+header.container, main .container, footer .container{
+	max-width: 855px;
+	
+}
+
+header{
+	padding: 30px 0 30px 0;
+	background: white;
+	border-bottom: 1px solid white;
+}
+h1{
+	font-size: 30px;
+	color:red;
+	float: left;
+	width:570px;
+}
+
+header nav{
+	width:285px;
+	float:right;
+}
+
+a{
+	text-decoration:none;
+}
+
+
+main{
+	background:white;
+	border-radius: 0 5px 5px 5px;
+	padding 35px;
+	
+}
+
+.tabs a span {    
+	display: inline-block;    
+	border-radius: 5px 5px 0 0;    
+	width: 100px;    
+	margin-right: 10px;    
+	text-align: center;    
+	background: #ddd;    
+	padding: 5px; 
+}
+.tabs a span.active {    
+	background: #eee; 
+}
+	
+main .content {
+    padding: 30px 10px 30px 10px;
+    border-radius: 0 5px 5px 5px;
+    background: #eee;
+}
+
+main .content li {
+    border-radius: 5px;
+    padding: 3px;
+    background: #eff;
+    margin: 0 0 10px 0;
+}
+
+main .content button {
+  font-weight: bold;
+  padding: 0 3px 0 3px;
+  border-radius: 5px;
+  background: #ccc;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 1.3em;
+}
+
+
+main .content p {
+    background: yellow;
+}
+
+main .content input {
+    font-size: 1.5em;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    padding: 40px 0 20px 0;
+}
+
+footer .contact {
+  float: left;
+  width: 570px;    
+}
+
+footer .contact p:nth-child(2) {
+  color: #b33;
+  font-style: italic;
+}
+
+footer .sitemap {
+    float: right;
+    width: 285px;
+}
+
+footer ul {
+    width: 230px;
+}
+
+li {
+    list-style: none;
+}
+
+footer .sitemap .left {
+    float: left;
+}
+
+footer .sitemap .right {
+    float: right;
+}
+
+

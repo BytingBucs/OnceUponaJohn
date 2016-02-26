@@ -42,19 +42,74 @@ var main = function (toDoObjects) {
                         }
                     });
                 });
-                
-				$content = $("<div>").append($input).append($button);
-				/* Alternatively append() allows multiple arguments so the above 
-				can be done with $content = $("<div>").append($input, $button); */
-			}
-			
-			$("main .content").append($content);
-			
-			return false;
-			
-		});
-	});
-	
-	$(".tabs a:first-child span").trigger("click");
+                console.log(tags);
+
+                var tagObjects = tags.map(function (tag) {
+                    var toDosWithTag = [];
+
+                    toDoObjects.forEach(function (toDo) {
+                        if (toDo.tags.indexOf(tag) !== -1) {
+                            toDosWithTag.push(toDo.description);
+                        }
+                    });
+
+                    return { "name": tag, "toDos": toDosWithTag };
+                });
+
+                tagObjects.forEach(function (tag) {
+                    var $tagName = $("<h3>").text(tag.name),
+                        $content = $("<ul>");
+
+
+                    tag.toDos.forEach(function (description) {
+                        var $li = $("<li>").text(description);
+                        $content.append($li);
+                    });
+
+                    $("main .content").append($tagName);
+                    $("main .content").append($content);
+                });
+
+            } else if ($element.parent().is(":nth-child(4)")) {
+                var $input = $("<input>").addClass("description"),
+                    $inputLabel = $("<p>").text("Description: "),
+                    $tagInput = $("<input>").addClass("tags"),
+                    $tagLabel = $("<p>").text("Tags: "),
+                    $button = $("<button>").text("+");
+
+                $button.on("click", function () {
+                    var description = $input.val(),
+                        tags = $tagInput.val().split(",");
+                                 
+                    toDoObjects.push({"description":description, "tags":tags});
+
+                    // update toDos
+                    toDos = toDoObjects.map(function (toDo) {
+                        return toDo.description;
+                    });
+
+                    $input.val("");
+                    $tagInput.val("");
+                });
+
+                $content = $("<div>").append($inputLabel)
+                                     .append($input)
+                                     .append($tagLabel)
+                                     .append($tagInput)
+                                     .append($button);
+            }
+
+            $("main .content").append($content);
+
+            return false;
+        });
+    });
+
+    $(".tabs a:first-child span").trigger("click");
 };
-$(document).ready(main);
+
+$(document).ready(function () {
+    $.getJSON("todos.json", function (toDoObjects) {
+        main(toDoObjects);
+    });
+});

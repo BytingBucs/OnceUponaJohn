@@ -1,0 +1,6 @@
+I contributed some design input into the shopping list site. The css file that our group was working on was on Christopher’s hard drive. I pretty much just helped with picking out
+fonts and color schemes. Other than that, I didn't do to much with functionality because I couldn't get my chapter 9 working fully. 
+
+In this class I learned a lot more about javascript and jquery. I learned how to attach an html file to a .json file and javascript file. I also learned
+more about styling documents. The book that we selected was rather difficult to follow, but I think it served a decent purpose. I am glad I will be able to use the
+skills acquired in this class in my future website coding endeavors. 
